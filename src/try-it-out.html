@@ -1,0 +1,56 @@
+---
+layout: post.html
+---
+
+<h1>Try It Out</h1>
+
+<form>
+	<div>
+		<label for="url">URL: </label>
+		<input name="url" required />
+	</div>
+	<div>
+		<label for="dark">Use the dark theme: </label>
+		<select name="dark" required>
+			<option value="true">true</option>
+			<option value="false">false</option>
+		</select>
+	</div>
+	<div>
+		<label for="both">Show both Reddit and HN Comments: </label>
+		<select name="both" required>
+			<option value="true">true</option>
+			<option value="false">false</option>
+		</select>
+	</div>
+	<div>
+		<label for="service">Comments to show on load: </label>
+		<select name="service" required>
+			<option value="hn">HackerNews</option>
+			<option value="reddit">Reddit</option>
+		</select>
+	</div>
+	<div>
+		<label for="limit">Number of comments to show at a time: </label>
+		<input type="number" name="limit" />
+	</div>
+	<div>
+		<label for="loadMore">Load More Button: </label>
+		<select name="loadMore" required>
+			<option value="true">true</option>
+			<option value="false">false</option>
+		</select>
+	</div>
+	<div>
+		<label for="infiniteScroll">Infinite Scroll: </label>
+		<select name="infiniteScroll" required>
+			<option value="true">true</option>
+			<option value="false">false</option>
+		</select>
+	</div>
+	<button type="submit">Go!</button>
+</form>
+
+<div class="try-it-container"></div>
+
+<script src="/try.js"></script>
