@@ -11,6 +11,7 @@ $serif:Georgia, serif;
 $sans-serif: Verdana, sans-serif;
 
 $content-width: 1024px;
+$mobile: new-breakpoint(max-width 640px);
 
 body {
   background-color: $background-light;
@@ -38,7 +39,7 @@ header {
   nav {
     max-width: $content-width;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px;
 
     a {
       font-family: $sans-serif;
@@ -112,34 +113,79 @@ section.index {
 
   .buttons {
     padding: 20px;
-
-    button {
-      background-color: $text-dark;
-      color: $text-light;
-      font-size: 1.5rem;
-      cursor: pointer;
-      border: 2px solid $text-dark;
-      padding: 5px 10px;
-      margin: 0 10px;
-      box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
-      @include transition(all 0.2s ease-in-out);
-    }
-
-    button:hover {
-      background-color: $background-dark;
-      color: $background-light;
-      border: 2px solid $text-light;
-      @include transition(all 0.2s ease-in-out);
-    }
   }
+}
+
+button.dark {
+  background-color: $text-dark;
+  color: $text-light;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid $text-dark;
+  padding: 5px 10px;
+  margin: 0 10px;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  @include transition(all 0.2s ease-in-out);
+}
+
+button.dark:hover {
+  background-color: $background-dark;
+  color: $background-light;
+  border: 2px solid $text-light;
+  @include transition(all 0.2s ease-in-out);
 }
   
 article.post {
   max-width: $content-width;
+  padding: 0 20px;
   margin: 0 auto;
   padding-top: 75px;
+  padding-bottom: 35px;
 
   .embedd-container {
     z-index: 1;
+  }
+}
+
+form {
+  font-family: $sans-serif;
+
+  section {
+    @include outer-container;
+  }
+
+  aside {
+    @include span-columns(6);
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+  
+  .button {
+    text-align: center;
+  }
+    
+  label {
+    display: block;
+  }
+
+  input, select {
+    font: 14px $sans-serif;
+    color: $text-dark;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #fff;
+  }
+
+  button.dark {
+    display: block;
+    padding: 5px 25px;
+    margin: 10px auto;
+  }
+
+  @include media($mobile) {
+    text-align: center;
   }
 }

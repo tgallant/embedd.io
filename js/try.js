@@ -64,11 +64,8 @@
 			}
 		};
 
-		opts.debug = true;
-
 		createScript(opts);
 	};
 
 	renderEmbedd();
-
 })();

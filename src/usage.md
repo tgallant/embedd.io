@@ -2,6 +2,8 @@
 layout: post.html
 ---
 
+# Usage
+
 Embedd allows you to display reddit and/or HackerNews comments on your
 website. The intended use case is for blogs and product pages,
 although it is configurable enough for other cases.
