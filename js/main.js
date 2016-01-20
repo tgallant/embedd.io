@@ -6,8 +6,6 @@
 	var mobileButton = document.querySelector('.mobile a');
 	var navOptions = document.querySelector('.desk');
 
-	console.log('push hook test');
-	
 	function addFixedNav() {
 		if(!header.classList.contains('fixed')) {
 			header.classList.add('fixed');
