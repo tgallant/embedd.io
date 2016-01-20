@@ -3,6 +3,8 @@
 (function() {
 	var lastScroll = window.pageYOffset || document.body.scrollTop;
 	var header = document.querySelector('header');
+	var mobileButton = document.querySelector('.mobile a');
+	var navOptions = document.querySelector('.desk');
 	
 	function addFixedNav() {
 		if(!header.classList.contains('fixed')) {
@@ -29,7 +31,12 @@
 		}
 
 		lastScroll = currentScroll;
-		
 	});
+
+	mobileButton.addEventListener('click', function(e) {
+		e.preventDefault();
+		header.classList.toggle('open');
+	});
+
 	
 })();

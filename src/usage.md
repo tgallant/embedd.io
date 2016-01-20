@@ -16,9 +16,11 @@ same if you download the code and host it yourself.
 You can get started right now by adding the following script tag to
 your website.
 
-``` html
+<div class="code">
+```
 <script src="https://embedd.io/embedd.min.js"></script>
 ```
+</div>
 
 The default behavior is to search reddit and HackerNews for all posts
 that link to the URL of the current page. For each reddit and
@@ -34,8 +36,9 @@ behavior as stated above.
 
 Here is an example with all possible configuration options set.
 
-``` html
-<script src="embedd.js">
+<div class="code">
+
+<pre>```<script src="embedd.js">
 	{
 		"url": "https://www.eff.org/deeplinks/2015/10/closing-loopholes-europes-net-neutrality-compromise",
 		"element": "#embeddSection",
@@ -47,8 +50,9 @@ Here is an example with all possible configuration options set.
 		"limit": 10,
 		"debug": true
 	} 
-</script>
-```
+</script>```</pre>
+
+</div>
 
 **url**: (default: current URL) The `url` option will use the URL
   that is passed as the search query for reddit and/or HackerNews.

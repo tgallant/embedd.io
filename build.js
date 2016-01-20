@@ -10,14 +10,18 @@ let metalsmith = require('metalsmith'),
 		scss = require('./plugins/scss');
 
 const meta = {
-	title: "embedd.io"
+	title: "embedd.io | the best option for embedding reddit and hacker news comments",
+	description: "Embedd allows you to show off your Reddit and HackerNews comments " +
+		"right on your blog or product page. The painless setup makes it easy " +
+		"to get started right away",
+	keywords: "reddit hackernews hacker news hn embedd js javascript blog wordpress landing page"
 };
 
 function build() {
 	metalsmith(__dirname)
 		.metadata(meta)
 		.use(markdown())
-		.use(layouts('handlebars'))
+		.use(layouts({ engine: 'handlebars', partials: 'partials' }))
 		.use(permalinks('posts/:title'))
 		.use(assets({
 			source: './js',

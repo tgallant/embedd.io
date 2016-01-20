@@ -24,6 +24,7 @@ body {
   }
   
   a {
+    color: $background-dark;
     text-decoration: none;
   }
 }
@@ -65,6 +66,58 @@ header {
         margin-right: 0;
       }
     }
+
+    aside.desk {
+      @include media($mobile) {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #3EACA8;
+        margin-top: 59px;
+        text-align: center;
+        z-index: 3;
+        @include transition(all 0.2s ease);
+
+        a {
+          display: block;
+          margin-right: 0;
+          margin: 15px 0;
+          font-size: 20px;
+          color: $background-light;
+        }
+      }
+    }
+
+    aside.mobile {
+      display: none;
+      z-index: 4;
+      @include media($mobile) {
+        display:block;
+      }
+      a:hover {
+        border-bottom: none;
+      }
+    }
+  }
+  .fa-times {
+    display: none;
+  }
+}
+
+header.open {
+  .fa-times {
+    display: inline-block;
+  }
+  .fa-bars {
+    display: none;
+  }
+  aside.desk {
+    opacity: 1;
+    height: 100vh;
+    @include transition(all 0.2s ease);
   }
 }
 
@@ -80,9 +133,18 @@ section.index {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  padding: 0 20px;
+  @include media($mobile) {
+    display: block;
+    height: 100%;
+    padding: 60px 20px;
+  }
   
   h1 {
     font-size: 2rem;
+    @include media($mobile) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
@@ -102,18 +164,19 @@ section.index {
     padding: 20px;
   }
 
-  .code {
-    background-color: $background-light;
-    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
-    color: $text-dark;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 10px;
-  }
-
   .buttons {
     padding: 20px;
   }
+}
+
+.code {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  color: $text-dark;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  overflow-x: auto;
 }
 
 button.dark {
@@ -124,8 +187,12 @@ button.dark {
   border: 2px solid $text-dark;
   padding: 5px 10px;
   margin: 0 10px;
+  margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   @include transition(all 0.2s ease-in-out);
+  @include media($mobile) {
+		width: 100%;
+  }
 }
 
 button.dark:hover {
@@ -134,13 +201,17 @@ button.dark:hover {
   border: 2px solid $text-light;
   @include transition(all 0.2s ease-in-out);
 }
-  
+
 article.post {
   max-width: $content-width;
   padding: 0 20px;
   margin: 0 auto;
   padding-top: 75px;
   padding-bottom: 35px;
+
+  .code {
+    max-width: 650px;
+  }
 
   .embedd-container {
     z-index: 1;
@@ -165,7 +236,7 @@ form {
   .button {
     text-align: center;
   }
-    
+  
   label {
     display: block;
   }

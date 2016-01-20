@@ -4,29 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{title}}</title>
-    <meta name="description" content="">
+    <meta name="description" content="{{description}}">
+		<meta name="keywords" content="{{keywords}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/main.css">
     <!-- Place favicon.ico in the root directory -->
   </head>
   <body>
-		<header>
-			<nav>
-				<a href="/">Embedd.io</a>
-				<aside>
-					<a href="/usage">Usage</a>
-					<a href="/try-it-out">Try It Out</a>
-					<a href="https://github.com/tgallant/embedd" target="_blank">Github</a>
-				</aside>
-			</nav>
-		</header>
+
+		{{> header}}
+
 		<section class="index">
 			<div class="wrapper">
 				<div class="info">
 					<h1>Display the Best Comments About Your Work</h1>
-					<p>Embed allows you to show off your Reddit and HackerNews comments right on your blog or product page</p>
+					<p>Embedd allows you to show off your Reddit and HackerNews comments right on your blog or product page</p>
 				</div>
 				<div class="code">
 					<pre><code class="lang-html">&lt;script src="https://embedd.io/embedd.min.js"&gt;&lt;/script&gt;</code></pre>
@@ -41,5 +36,6 @@
 				</div>
 			</div>
 		</section>
+		<script src="/main.js"></script>
   </body>
 </html>
