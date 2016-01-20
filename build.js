@@ -9,7 +9,6 @@ let metalsmith = require('metalsmith'),
 		assets = require('metalsmith-assets'),
 		scss = require('./plugins/scss');
 
-
 const meta = {
 	title: "embedd.io | the best option for embedding reddit and hacker news comments",
 	description: "Embedd allows you to show off your Reddit and HackerNews comments " +
