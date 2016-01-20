@@ -5,6 +5,8 @@
 	var header = document.querySelector('header');
 	var mobileButton = document.querySelector('.mobile a');
 	var navOptions = document.querySelector('.desk');
+
+	console.log('push hook test');
 	
 	function addFixedNav() {
 		if(!header.classList.contains('fixed')) {
@@ -36,7 +38,5 @@
 	mobileButton.addEventListener('click', function(e) {
 		e.preventDefault();
 		header.classList.toggle('open');
-	});
-
-	
+	});	
 })();
