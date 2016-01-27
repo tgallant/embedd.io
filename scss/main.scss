@@ -218,8 +218,14 @@ article.post {
   padding-top: 75px;
   padding-bottom: 35px;
 
+	.wrapper {
+		text-align: center;
+	}
+	
   .code {
-    max-width: 650px;
+		display: inline-block;
+		text-align: left;
+    max-width: 100%;
   }
 
   .embedd-container {

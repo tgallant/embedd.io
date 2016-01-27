@@ -16,10 +16,12 @@ same if you download the code and host it yourself.
 You can get started right now by adding the following script tag to
 your website.
 
+<div class="wrapper">
 <div class="code">
 ```
 <script src="https://embedd.io/embedd.min.js"></script>
 ```
+</div>
 </div>
 
 The default behavior is to search reddit and HackerNews for all posts
@@ -36,6 +38,7 @@ behavior as stated above.
 
 Here is an example with all possible configuration options set.
 
+<div class="wrapper">
 <div class="code">
 
 <pre>```<script src="embedd.js">
@@ -52,6 +55,7 @@ Here is an example with all possible configuration options set.
 	} 
 </script>```</pre>
 
+</div>
 </div>
 
 **url**: (default: current URL) The `url` option will use the URL
