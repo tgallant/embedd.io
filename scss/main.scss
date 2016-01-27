@@ -40,7 +40,7 @@ header {
   nav {
     max-width: $content-width;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
 
@@ -82,7 +82,7 @@ header {
         top: 0;
         bottom: 0;
         background-color: #3EACA8;
-        margin-top: 83px;
+        margin-top: 63px;
         text-align: center;
         z-index: 3;
         @include transition(all 0.2s ease);
