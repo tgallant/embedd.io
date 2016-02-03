@@ -7,8 +7,8 @@ layout: post.html
 <form>
 	<section>
 		<aside>
-			<label for="url">URL: </label>
-			<input name="url" required />
+			<label for="url">URL (Leave blank to use the current URL): </label>
+			<input name="url" />
 			<label for="limit">Number of comments to show at a time: </label>
 			<input type="number" name="limit" />
 			<label for="loadMore">Load More Button: </label>
@@ -48,6 +48,13 @@ layout: post.html
 	</section>
 	<button class="dark" type="submit">Go!</button>
 </form>
+
+<div class="wrapper">
+	<h3>Copy the config below to get started with the options selected above.</h3>
+	<div class="code">
+		<pre><code data-config-block></code></pre>
+	</div>
+</div>
 
 <div class="try-it-container"></div>
 

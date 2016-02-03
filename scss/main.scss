@@ -235,6 +235,7 @@ article.post {
 
 form {
   font-family: $sans-serif;
+	margin-bottom: 40px;
 
   section {
     @include outer-container;
