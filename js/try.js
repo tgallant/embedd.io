@@ -33,7 +33,7 @@
 
 	function fillTemplate(opts) {
 		var configBlock = document.querySelector('[data-config-block]');
-		var scriptStart = '&lt;script src="https://embedd.io/embedd.js"&gt;';
+		var scriptStart = '&lt;script src="https://embedd.io/embedd.min.js"&gt;';
 		var scriptEnd = '&lt;/script&gt;';
 
 		var config = extend({}, opts);
