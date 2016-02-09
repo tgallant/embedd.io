@@ -41,7 +41,7 @@ Here is an example with all possible configuration options set.
 <div class="wrapper">
 <div class="code">
 
-<pre>```<script src="embedd.js">
+<pre>```<script src="https://embedd.io/embedd.min.js">
 	{
 		"url": "https://www.eff.org/deeplinks/2015/10/closing-loopholes-europes-net-neutrality-compromise",
 		"element": "#embeddSection",
