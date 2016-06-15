@@ -5,12 +5,14 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "watch": "nodemon -e js,scss,html,md --ignore node_modules/ --ignore build/ build.js -- -w",
+    "watch": "nodemon -e js,css,html,md --ignore node_modules/ --ignore build/ build.js -- -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tim Gallant",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.7.0",
     "finalhandler": "0.4.1",
     "handlebars": "4.0.5",
     "metalsmith": "2.1.0",
@@ -18,10 +20,14 @@
     "metalsmith-layouts": "1.4.2",
     "metalsmith-markdown": "0.2.1",
     "metalsmith-permalinks": "0.4.1",
-    "node-bourbon": "4.2.3",
-    "node-neat": "1.7.2",
-    "node-sass": "3.4.2",
+    "metalsmith-postcss": "4.0.0",
     "nodemon": "1.8.1",
+    "postcss": "5.0.21",
+    "postcss-cssnext": "2.6.0",
+    "postcss-csso": "^1.1.2",
+    "postcss-neat": "2.5.2",
+    "postcss-normalize": "^0.3.0",
+    "postcss-simple-vars": "^2.0.0",
     "serve-static": "1.10.0"
   }
 }
