@@ -10,7 +10,7 @@ start server with reloading
 
 `npm run watch`
 
-build sites
+build site
 
 `npm run build`
 
