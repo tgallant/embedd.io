@@ -1,11 +1,30 @@
+@font-face {
+  font-family: 'League Gothic';
+  src: url('/fonts/leaguegothic/leaguegothic-regular-webfont.eot');
+  src: url('/fonts/leaguegothic/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/leaguegothic/leaguegothic-regular-webfont.woff') format('woff'),
+    url('/fonts/leaguegothic/leaguegothic-regular-webfont.ttf') format('truetype'),
+    url('/fonts/leaguegothic/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'procionoregular';
+  src: url('/fonts/prociono/prociono-regular-webfont.woff2') format('woff2'),
+    url('/fonts/prociono/prociono-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $background-dark: #547A82;
-$background-light: #E5EEC1;
+$background-light: #E0F2F1;
 
 $text-dark: #5A5050;
-$text-light: #A2D4AB;
+$text-light: #E0F2F1;
 
-$serif: Georgia, serif;
-$sans-serif: Verdana, sans-serif;
+$serif: 'procionoregular', Georgia, serif;
+$sans-serif: 'League Gothic', Verdana, sans-serif;
 
 $content-width: 1024px;
 $mobile: max-width 640px;
@@ -28,6 +47,8 @@ body {
 
   & h1, & h2, & h3 {
     font-family: $sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
   }
   
   & a {
@@ -53,7 +74,7 @@ header {
 
     & a {
       font-family: $sans-serif;
-      color: $text-light;
+      color: #A2D4AB;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: all 0.2s ease-in-out;
@@ -74,6 +95,9 @@ header {
 
       & a {
         margin-right: 25px;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
       & a:last-of-type {
         margin-right: 0;
@@ -151,12 +175,18 @@ section.index {
   height: 100vh;
   
   & h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a2d4ab;
   }
 
   & p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.4px;
     margin-bottom: 0;
+    color: #a2d4ab;
   }
 
   & .wrapper {
@@ -201,8 +231,10 @@ section.index {
 
 button.dark {
   font-family: $sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   background-color: $text-dark;
-  color: $text-light;
+  color: #a2d4ab;
   font-size: 1.5rem;
   cursor: pointer;
   border: 2px solid $text-dark;
@@ -233,6 +265,11 @@ article.post {
   padding-top: 75px;
   padding-bottom: 35px;
 
+  & p {
+    font-size: 1.1rem;
+    line-spacing: 1.6;
+  }
+
 	& .wrapper {
 		text-align: center;
 	}
@@ -258,19 +295,19 @@ form {
 
   & aside {
     @neat-span-columns 6;
-
   }
-  
+
   & .button {
     text-align: center;
   }
   
   & label {
     display: block;
+    font-size: 22px;
   }
 
   & input, & select {
-    font: 14px $sans-serif;
+    font: 18px $sans-serif;
     color: $text-dark;
     width: 100%;
     margin: 10px 0;
