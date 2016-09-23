@@ -1,4 +1,4 @@
-/*global location*/
+/* global location */
 
 (function () {
   function extend (o1, o2) {

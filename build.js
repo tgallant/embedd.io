@@ -1,4 +1,4 @@
-/*global require,process,__dirname*/
+/* global require,process,__dirname */
 
 'use strict'
 
