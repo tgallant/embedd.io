@@ -16,19 +16,19 @@
     "cssnano": "^3.7.0",
     "handlebars": "4.0.5",
     "http-server": "^0.9.0",
-    "metalsmith": "2.1.0",
+    "metalsmith": "2.2.0",
     "metalsmith-assets": "0.1.0",
-    "metalsmith-layouts": "1.4.2",
+    "metalsmith-layouts": "1.6.5",
     "metalsmith-markdown": "0.2.1",
-    "metalsmith-permalinks": "0.4.1",
+    "metalsmith-permalinks": "0.5.0",
     "metalsmith-postcss": "4.0.0",
-    "nodemon": "1.8.1",
-    "postcss": "5.0.21",
-    "postcss-cssnext": "2.6.0",
+    "nodemon": "1.10.2",
+    "postcss": "5.2.0",
+    "postcss-cssnext": "2.8.0",
     "postcss-csso": "^1.1.2",
     "postcss-neat": "2.5.2",
     "postcss-normalize": "^0.3.0",
-    "postcss-simple-vars": "^2.0.0",
-    "snazzy": "^4.0.0"
+    "postcss-simple-vars": "^3.0.0",
+    "snazzy": "^5.0.0"
   }
 }
