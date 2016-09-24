@@ -15,29 +15,36 @@ const meta = {
   keywords: 'reddit hackernews hacker news hn embedd js javascript blog wordpress landing page'
 }
 
-function build () {
-  metalsmith(__dirname)
-    .metadata(meta)
-    .use(markdown())
-    .use(layouts({ engine: 'handlebars', partials: 'partials' }))
-    .use(permalinks('posts/:title'))
-    .use(assets({
-      source: './assets',
-      destination: './'
-    }))
-    .use(postcss({
-      plugins: {
-        'postcss-cssnext': {},
-        'postcss-simple-vars': {},
-        'css-mqpacker': {},
-        'postcss-neat': {},
-        'postcss-normalize': {},
-        'postcss-csso': {}
-      }
-    }))
-    .build(err => {
-      if (err) { throw err }
-    })
+const layoutConfig = {
+  engine: 'handlebars',
+  partials: 'partials'
 }
 
-build()
+const assetsConfig = {
+  source: './assets',
+  destination: './'
+}
+
+const postCssConfig = {
+  plugins: {
+    'postcss-cssnext': {},
+    'postcss-simple-vars': {},
+    'css-mqpacker': {},
+    'postcss-neat': {},
+    'postcss-normalize': {},
+    'postcss-csso': {}
+  }
+}
+
+function handleError (err) {
+  if (err) { throw err }
+}
+
+metalsmith(__dirname)
+  .metadata(meta)
+  .use(markdown())
+  .use(layouts(layoutConfig))
+  .use(permalinks('posts/:title'))
+  .use(assets(assetsConfig))
+  .use(postcss(postCssConfig))
+  .build(handleError)
