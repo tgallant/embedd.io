@@ -56,9 +56,50 @@ body {
     letter-spacing: 1px;
   }
 
+  & h1 {
+    font-size: ms(3)em;
+  }
+
+  & h2 {
+    font-size: ms(2)em;
+  }
+
+  & h3 {
+    font-size: ms(1)em;
+  }
+
   & a {
     color: $background-dark;
     text-decoration: none;
+  }
+
+  & p, & a, & li {
+    font-size: ms(1)em;
+    line-height: 1.7;
+  }
+
+  & * a {
+    font-size: 1em;
+  }
+}
+
+@media (--mobile) {
+  body {
+    & h1 {
+      font-size: ms(2)em;
+    }
+
+    & h2 {
+      font-size: ms(1)em;
+    }
+
+    & h3 {
+      font-size: ms(0)em;
+    }
+
+    & p, & a, & li {
+      font-size: ms(0)em;
+    }
   }
 }
 
@@ -116,7 +157,7 @@ header {
         border-bottom: none;
       }
       & .fa {
-        font-size: 20px;
+        font-size: ms(0)em;
       }
     }
   }
@@ -137,16 +178,18 @@ header {
     margin-top: 63px;
     text-align: center;
     z-index: 3;
+    pointer-events: none;
     transition: all 0.2s ease;
 
     & a {
       display: block;
       margin-right: 0;
       margin: 15px 0;
-      font-size: 20px;
+      font-size: ms(2)em;
       color: $background-light;
     }
   }
+
   header nav aside.mobile {
     display:block;
   }
@@ -162,6 +205,7 @@ header.open {
   & aside.desk {
     opacity: 1;
     height: 100vh;
+    pointer-events: all;
     transition: all 0.2s ease;
   }
 }
@@ -180,17 +224,16 @@ section.index {
   height: 100vh;
 
   & h1 {
-    font-size: 3rem;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #a2d4ab;
+    margin-bottom: 0;
   }
 
   & p {
-    font-size: 1.3rem;
     letter-spacing: 0.4px;
-    margin-bottom: 0;
+    margin: 0;
     color: #a2d4ab;
   }
 
@@ -201,7 +244,6 @@ section.index {
 
   & .info {
     font-family: $sans-serif;
-    max-width: 750px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -218,17 +260,21 @@ section.index {
     padding: 60px 20px;
 
     & h1 {
-      font-size: 1.5rem;
+      font-size: ms(2)em;
+    }
+
+    & p {
+      font-size: ms(1)em;
     }
   }
 }
 
 .code {
-  font-size: 13px;
+  font-size: ms(0)em;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   color: $text-dark;
-  max-width: 500px;
+  max-width: 550px;
   margin: 20px auto;
   padding: 10px;
   overflow-x: auto;
@@ -244,8 +290,7 @@ button.dark {
   cursor: pointer;
   border: 2px solid $text-dark;
   padding: 5px 10px;
-  margin: 0 10px;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 0;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   transition: all 0.2s ease-in-out;
 }
@@ -269,11 +314,6 @@ article.post {
   margin: 0 auto;
   padding-top: 75px;
   padding-bottom: 35px;
-
-  & p {
-    font-size: 1.1rem;
-    line-spacing: 1.6;
-  }
 
 	& .wrapper {
 		text-align: center;
@@ -308,11 +348,11 @@ form {
 
   & label {
     display: block;
-    font-size: 22px;
+    font-size: ms(1)em;
   }
 
   & input, & select {
-    font: 18px $sans-serif;
+    font: ms(0)em $serif;
     color: $text-dark;
     width: 100%;
     margin: 10px 0;
