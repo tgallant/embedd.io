@@ -17,6 +17,11 @@
   font-style: normal;
 }
 
+:root {
+  --ms-bases: 1, 0.75;
+  --ms-ratios: 1.2;
+}
+
 $background-dark: #547A82;
 $background-light: #E0F2F1;
 
