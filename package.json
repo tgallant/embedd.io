@@ -26,6 +26,7 @@
     "postcss": "5.2.0",
     "postcss-cssnext": "2.8.0",
     "postcss-csso": "^1.1.2",
+    "postcss-modular-scale": "^2.5.2",
     "postcss-neat": "2.5.2",
     "postcss-normalize": "^0.3.0",
     "postcss-simple-vars": "^3.0.0",

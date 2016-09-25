@@ -29,6 +29,7 @@ const postCssConfig = {
   plugins: {
     'postcss-cssnext': {},
     'postcss-simple-vars': {},
+    'postcss-modular-scale': {},
     'css-mqpacker': {},
     'postcss-neat': {},
     'postcss-normalize': {},
