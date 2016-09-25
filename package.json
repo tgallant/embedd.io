@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build.js",
     "start": "npm run build && http-server build/",
-    "watch": "nodemon -e js,css,html,md --ignore node_modules/ --ignore build/ --exec 'npm run start'",
+    "watch": "nodemon -e js,css,pug,md --ignore node_modules/ --ignore build/ --exec 'npm run start'",
     "test": "snazzy"
   },
   "author": "Tim Gallant",
@@ -14,7 +14,6 @@
   "devDependencies": {
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.0",
-    "handlebars": "4.0.5",
     "http-server": "^0.9.0",
     "metalsmith": "2.2.0",
     "metalsmith-assets": "0.1.0",
@@ -22,6 +21,7 @@
     "metalsmith-markdown": "0.2.1",
     "metalsmith-permalinks": "0.5.0",
     "metalsmith-postcss": "4.0.0",
+    "metalsmith-pug": "^1.1.0",
     "nodemon": "1.10.2",
     "postcss": "5.2.0",
     "postcss-cssnext": "2.8.0",
@@ -30,6 +30,7 @@
     "postcss-neat": "2.5.2",
     "postcss-normalize": "^0.3.0",
     "postcss-simple-vars": "^3.0.0",
+    "pug": "^2.0.0-beta6",
     "snazzy": "^5.0.0"
   }
 }

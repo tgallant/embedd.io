@@ -8,6 +8,7 @@ const layouts = require('metalsmith-layouts')
 const permalinks = require('metalsmith-permalinks')
 const assets = require('metalsmith-assets')
 const postcss = require('metalsmith-postcss')
+const pug = require('metalsmith-pug/lib/node6')
 
 const meta = {
   title: 'embedd.io | the best option for embedding reddit and hacker news comments',
@@ -16,8 +17,7 @@ const meta = {
 }
 
 const layoutConfig = {
-  engine: 'handlebars',
-  partials: 'partials'
+  engine: 'pug'
 }
 
 const assetsConfig = {
@@ -43,6 +43,7 @@ function handleError (err) {
 
 metalsmith(__dirname)
   .metadata(meta)
+  .use(pug())
   .use(markdown())
   .use(layouts(layoutConfig))
   .use(permalinks('posts/:title'))

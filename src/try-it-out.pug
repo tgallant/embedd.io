@@ -1,0 +1,44 @@
+---
+layout: post.pug
+---
+  
+h1 Try It Out
+  
+form
+  section
+    aside
+      label(for='url') URL (Leave blank to use the current URL):
+      input(name='url')
+      label(for='limit') Number of comments to show at a time:
+      input(type='number', name='limit')
+      label(for='loadMore') Load More Button:
+      select(name='loadMore', required='true')
+        option(value='true') true
+        option(value='false') false
+      label(for='infiniteScroll') Infinite Scroll
+      select(name='infiniteScroll', requierd='true')
+        option(value='true') true
+        option(value='false') false
+    aside
+      label(for='dark') Use the dark theme:
+      select(name='dark', requierd='true')
+        option(value='true') true
+        option(value='false') false
+      label(for='both') Show both Reddit and HN Comments:
+      select(name='both', required='true')
+        option(value='true') true
+        option(value='false') false
+      label(for='service') Comments to show on load:
+      select(name='service', required='true')
+        option(value='hn') HackerNews
+        option(value='reddit') Reddit
+  button.dark(type='submit') Go!
+
+.wrapper
+  h3 Copy the config below to get started with the options selected above.
+  .code
+    pre: code(data-config-block='1')
+  
+.try-it-container
+
+script(src='/js/try.js')
