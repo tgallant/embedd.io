@@ -59,7 +59,7 @@
 
   function renderEmbedd () {
     var config = {
-      url: 'https://blog.thiago.me/raspberry-pi-bare-metal-programming-with-rust/',
+      url: 'https://www.candyjapan.com/%E5%8F%A3',
       both: true,
       dark: false,
       loadMore: true,
