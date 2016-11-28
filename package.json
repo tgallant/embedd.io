@@ -24,7 +24,7 @@
     "metalsmith-pug": "^2.0.0",
     "nodemon": "1.11.0",
     "postcss": "5.2.6",
-    "postcss-cssnext": "2.8.0",
+    "postcss-cssnext": "2.9.0",
     "postcss-csso": "^1.1.2",
     "postcss-modular-scale": "^2.5.2",
     "postcss-neat": "2.5.2",
