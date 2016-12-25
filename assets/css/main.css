@@ -358,6 +358,9 @@ form {
     margin: 10px 0;
     padding: 5px;
     background-color: #fff;
+    border: 1px solid $text-dark;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
   }
 
   & button.dark {
