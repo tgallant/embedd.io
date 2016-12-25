@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'League Gothic';
+  font-style: normal;
+  font-weight: normal;
   src: url('/fonts/leaguegothic/leaguegothic-regular-webfont.eot');
   src: url('/fonts/leaguegothic/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('/fonts/leaguegothic/leaguegothic-regular-webfont.woff') format('woff'),
     url('/fonts/leaguegothic/leaguegothic-regular-webfont.ttf') format('truetype'),
     url('/fonts/leaguegothic/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'procionoregular';
+  font-style: normal;
+  font-weight: normal;
   src: url('/fonts/prociono/prociono-regular-webfont.woff2') format('woff2'),
     url('/fonts/prociono/prociono-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 :root {
@@ -22,14 +22,14 @@
   --ms-ratios: 1.2;
 }
 
-$background-dark: #547A82;
 $background-light: #E0F2F1;
+$background-dark: #547A82;
 
-$text-dark: #5A5050;
 $text-light: #E0F2F1;
+$text-dark: #5A5050;
 
-$serif: 'procionoregular', Georgia, serif;
 $sans-serif: 'League Gothic', Verdana, sans-serif;
+$serif: 'procionoregular', Georgia, serif;
 
 $content-width: 1024px;
 $mobile: max-width 640px;
@@ -105,30 +105,30 @@ body {
 
 header {
   background-color: $background-dark;
-  position: absolute;
-  top: 0;
-  right: 0;
   left:0;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 2;
 
   & nav {
-    max-width: $content-width;
-    margin: 0 auto;
-    padding: 10px 20px;
-    display: flex;
     align-items: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: $content-width;
+    padding: 10px 20px;
 
     & a {
-      font-family: $sans-serif;
-      color: #A2D4AB;
-      text-decoration: none;
       border-bottom: 1px solid transparent;
+      color: #A2D4AB;
+      font-family: $sans-serif;
+      text-decoration: none;
       transition: all 0.2s ease-in-out;
     }
 
     & a:hover {
-      color: $background-light;
       border-bottom: 1px solid $background-light;
+      color: $background-light;
       transition: all 0.2s ease-in-out;
     }
 
@@ -140,10 +140,10 @@ header {
       margin-left: auto;
 
       & a {
-        margin-right: 25px;
         font-size: 1.3rem;
-        text-transform: uppercase;
         letter-spacing: 1px;
+        margin-right: 25px;
+        text-transform: uppercase;
       }
       & a:last-of-type {
         margin-right: 0;
@@ -153,6 +153,7 @@ header {
     & aside.mobile {
       display: none;
       z-index: 4;
+
       & a:hover {
         border-bottom: none;
       }
@@ -168,25 +169,25 @@ header {
 
 @media (--mobile) {
   header nav aside.desk {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     background-color: #3EACA8;
+    bottom: 0;
+    left: 0;
     margin-top: 63px;
-    text-align: center;
-    z-index: 3;
+    opacity: 0;
     pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
     transition: all 0.2s ease;
+    z-index: 3;
 
     & a {
-      display: block;
-      margin-right: 0;
-      margin: 15px 0;
-      font-size: ms(2)em;
       color: $background-light;
+      display: block;
+      font-size: ms(2)em;
+      margin: 15px 0;
+      margin-right: 0;
     }
   }
 
@@ -203,8 +204,8 @@ header.open {
     display: none;
   }
   & aside.desk {
-    opacity: 1;
     height: 100vh;
+    opacity: 1;
     pointer-events: all;
     transition: all 0.2s ease;
   }
@@ -215,26 +216,26 @@ header.fixed {
 }
 
 section.index {
+  align-items: center;
   background-color: $background-dark;
   color: $background-light;
   display: flex;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
   width: 100%;
-  height: 100vh;
 
   & h1 {
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     color: #a2d4ab;
+    font-weight: normal;
+    letter-spacing: 1px;
     margin-bottom: 0;
+    text-transform: uppercase;
   }
 
   & p {
+    color: #a2d4ab;
     letter-spacing: 0.4px;
     margin: 0;
-    color: #a2d4ab;
   }
 
   & .wrapper {
@@ -270,28 +271,28 @@ section.index {
 }
 
 .code {
-  font-size: ms(0)em;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
   color: $text-dark;
-  max-width: 550px;
+  font-size: ms(0)em;
   margin: 20px auto;
-  padding: 10px;
+  max-width: 550px;
   overflow-x: auto;
+  padding: 10px;
 }
 
 button.dark {
-  font-family: $sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   background-color: $text-dark;
-  color: #a2d4ab;
-  font-size: 1.5rem;
-  cursor: pointer;
   border: 2px solid $text-dark;
-  padding: 5px 10px;
-  margin: 0 10px 10px 0;
   box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  color: #a2d4ab;
+  cursor: pointer;
+  font-family: $sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 0 10px 10px 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }
 
@@ -303,17 +304,17 @@ button.dark {
 
 button.dark:hover {
   background-color: $background-dark;
-  color: $background-light;
   border: 2px solid $text-light;
+  color: $background-light;
   transition: all 0.2s ease-in-out;
 }
 
 article.post {
+  margin: 0 auto;
   max-width: $content-width;
   padding: 0 20px;
-  margin: 0 auto;
-  padding-top: 75px;
   padding-bottom: 35px;
+  padding-top: 75px;
 
 	& .wrapper {
 		text-align: center;
@@ -321,8 +322,8 @@ article.post {
 
   & .code {
 		display: inline-block;
-		text-align: left;
     max-width: 100%;
+		text-align: left;
   }
 
   & .embedd-container {
@@ -352,13 +353,13 @@ form {
   }
 
   & input, & select {
-    font: ms(0)em $serif;
-    color: $text-dark;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px 5px;
     background-color: #fff;
     border: 1px solid $text-dark;
+    color: $text-dark;
+    font: ms(0)em $serif;
+    margin: 10px 0;
+    padding: 8px 5px;
+    width: 100%;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
   }
