@@ -23,7 +23,7 @@
     "metalsmith-postcss": "4.0.0",
     "metalsmith-pug": "^2.0.0",
     "nodemon": "1.11.0",
-    "postcss": "5.2.7",
+    "postcss": "5.2.8",
     "postcss-cssnext": "2.9.0",
     "postcss-csso": "^1.1.2",
     "postcss-modular-scale": "^2.5.2",
