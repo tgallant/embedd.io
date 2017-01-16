@@ -31,6 +31,6 @@
     "postcss-normalize": "^0.3.0",
     "postcss-simple-vars": "^3.0.0",
     "pug": "^2.0.0-beta6",
-    "snazzy": "^5.0.0"
+    "snazzy": "^6.0.0"
   }
 }
