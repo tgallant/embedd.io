@@ -2,6 +2,8 @@
 
 # embedd.io
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tgallant/embedd.io.svg)](https://greenkeeper.io/)
+
 start server
 
 `npm start`
