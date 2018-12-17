@@ -43,7 +43,7 @@ jobs:
           - v1-dependencies-
       - run: npm install
       - run: npm run build
-      - run: apt-get install awscli
+      - run: sudo apt-get install awscli
       - run: /bin/bash publish.sh
 
 workflows:
