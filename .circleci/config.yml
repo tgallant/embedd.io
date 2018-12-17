@@ -43,6 +43,7 @@ jobs:
           - v1-dependencies-
       - run: npm install
       - run: npm run build
+      - run: pip install awscli --upgrade --user
       - run: /bin/bash publish.sh
 
 workflows:
