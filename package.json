@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "build.js",
+  "engine": {
+    "node": "11.1.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "build": "node build.js",
     "start": "npm run build && http-server build/",
