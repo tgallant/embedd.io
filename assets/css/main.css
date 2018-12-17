@@ -18,7 +18,7 @@
 }
 
 :root {
-  --ms-bases: 1, 0.75;
+  --ms-bases: 1.2, 0.75;
   --ms-ratios: 1.2;
 }
 
@@ -57,11 +57,11 @@ body {
   }
 
   & h1 {
-    font-size: ms(3)em;
+    font-size: ms(2)em;
   }
 
   & h2 {
-    font-size: ms(2)em;
+    font-size: ms(1)em;
   }
 
   & h3 {
@@ -74,8 +74,8 @@ body {
   }
 
   & p, & a, & li {
-    font-size: ms(1)em;
-    line-height: 1.7;
+    font-size: ms(0)em;
+    line-height: 1.6;
   }
 
   & * a {
@@ -226,6 +226,7 @@ section.index {
 
   & h1 {
     color: #a2d4ab;
+    font-size: ms(3)em;
     font-weight: normal;
     letter-spacing: 1px;
     margin-bottom: 0;
@@ -234,6 +235,7 @@ section.index {
 
   & p {
     color: #a2d4ab;
+    font-size: ms(1)em;
     letter-spacing: 0.4px;
     margin: 0;
   }
@@ -262,10 +264,12 @@ section.index {
 
     & h1 {
       font-size: ms(2)em;
+      line-height: 1.2;
     }
 
     & p {
       font-size: ms(1)em;
+      line-height: 1.3;
     }
   }
 }
