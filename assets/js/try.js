@@ -59,7 +59,7 @@
 
   function renderEmbedd () {
     var config = {
-      url: 'https://www.candyjapan.com/%E5%8F%A3',
+      url: 'http://baatz.io/posts/haskell-in-a-startup/',
       both: true,
       dark: false,
       loadMore: true,
